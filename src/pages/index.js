@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Post from '../components/post'
@@ -8,7 +9,7 @@ import '../assets/css/style.css';
 
 const Index = () => {
   return (
-      <Layout >
+      <Layout class="container" >
     
         {/* <?php if ( have_posts() ) : ?> */}
     

@@ -5,6 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Evie',
+    tagline: 'A production-ready theme',
+    author: 'actuallyakash',
+    template: 'Evie',
+  },
   plugins: [],
 }
