@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 import Post from '../components/post'
@@ -8,6 +8,31 @@ import '../assets/css/bs-grid.css';
 import '../assets/css/style.css';
 
 const Index = () => {
+
+  const posts = useStaticQuery( graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              category
+              thumbnail {
+                id
+                name
+                publicURL
+                relativePath
+              }
+            }
+            excerpt
+            id
+          }
+        }
+      }
+    }
+  `)
+
   return (
       <Layout class="container" >
     
@@ -20,8 +45,9 @@ const Index = () => {
             <div class="evie-posts row">
 
               {/* looping the posts */}
-
-              <Post id="1" />
+              {posts.allMarkdownRemark.edges.map( post => (
+                <Post id={post.node.id} data={post.node} />
+              ))}
 
               {/* end loop */}
           

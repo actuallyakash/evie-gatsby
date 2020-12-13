@@ -6,7 +6,8 @@ const Post = ( props ) => {
     <article id={props.id}> 
         <div class="evie__post">
 
-        {/* todo: article thumbnail */}
+            {/* todo: article thumbnail */}
+            {/* <img src={props.data.frontmatter.thumbnail.relativePath} alt={props.data.frontmatter.thumbnail.name} /> */}
 
             <div class="post__details">
 
@@ -14,14 +15,14 @@ const Post = ( props ) => {
                     
                     {/* todo: dynamic category */}
                     <span class="evie__category">
-                        <a href="category-link" title="">Category</a>
+                        <a href="category-link" title="">{props.data.frontmatter.category}</a>
                     </span>
 
                     {/* dynamic date */}
                     <span class="date">
-                        <a href="http://evie.local/?p=2314" rel="bookmark">
-                            <time class="entry-date published updated" datetime="2015-05-25T12:52:33+00:00">May 25, 2015</time>
-                        </a>
+                        <Link to="#">
+                            <time class="entry-date published updated" datetime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
+                        </Link>
                     </span> 
                     
                 </div>
@@ -29,13 +30,14 @@ const Post = ( props ) => {
                 <div class="post__content">
                     
                     <h3 class="post__heading">
-                        <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">Title goes here</a>
+                        <Link to="#">
+                            {props.data.frontmatter.title}
+                        </Link>
                     </h3>
                     
-                    
-                    <a href="#">
-                        <p class="excerpt"> excerpt goes here.. </p>
-                    </a>
+                    <Link to="#">
+                        <p class="excerpt"> {props.data.excerpt}. </p>
+                    </Link>
                     
                 </div>
 
