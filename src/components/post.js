@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const Post = ( props ) => {
   return (
-    <article id={props.id}> 
+    <article id={props.id} class="col-md-4"> 
         <div class="evie__post">
 
             {/* todo: article thumbnail */}
@@ -13,18 +13,19 @@ const Post = ( props ) => {
 
                 <div class="post__meta">
                     
-                    {/* todo: dynamic category */}
-                    <span class="evie__category">
-                        <a href="category-link" title="">{props.data.frontmatter.category}</a>
-                    </span>
+                    {props.data.frontmatter.category &&
+                        <span class="evie__category">
+                            <a href="category-link" title="">{props.data.frontmatter.category}</a>
+                        </span>
+                    }
 
-                    {/* dynamic date */}
+                    {props.data.frontmatter.date &&
                     <span class="date">
                         <Link to="#">
                             <time class="entry-date published updated" datetime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
                         </Link>
                     </span> 
-                    
+                    }
                 </div>
 
                 <div class="post__content">
@@ -36,7 +37,7 @@ const Post = ( props ) => {
                     </h3>
                     
                     <Link to="#">
-                        <p class="excerpt"> {props.data.excerpt}. </p>
+                        <p class="excerpt"> {props.data.excerpt} </p>
                     </Link>
                     
                 </div>
@@ -46,11 +47,13 @@ const Post = ( props ) => {
                         <img src="https://streetviewhub.com/shots/100x100" alt="" />
                     </div>
 
-                    <span class="user__name">
-                        by <span class="author stress">
-                            <a class="url fn n" href="#">Ladiz Washroom</a>
+                    {props.data.frontmatter.author &&
+                        <span class="user__name">
+                            by <span class="author stress">
+                                <a class="url fn n" href="#">{props.data.frontmatter.author}</a>
+                            </span>
                         </span>
-                    </span>
+                    }
                 </div>
 
             </div>

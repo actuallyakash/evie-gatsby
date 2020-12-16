@@ -18,6 +18,7 @@ const Index = () => {
               title
               date
               category
+              author
               thumbnail {
                 id
                 name

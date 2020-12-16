@@ -1,6 +1,7 @@
 ---
 title: "React"
 date: "01-12-2020"
+author: "akash"
 ---
 
 React is something!

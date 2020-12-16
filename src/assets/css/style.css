@@ -1154,7 +1154,8 @@ select::-ms-expand {
 
 .evie__post .post__meta .date {
   font-size: 13px;
-  font-weight: 600; 
+  font-weight: 600;
+  margin-left: auto; 
 }
 
 @media (min-width: 768px) {
