@@ -15,15 +15,13 @@ const Post = ( props ) => {
                     
                     {props.data.frontmatter.category &&
                         <span class="evie__category">
-                            <a href="category-link" title="">{props.data.frontmatter.category}</a>
+                            <Link to="" className="category-link">{props.data.frontmatter.category}</Link>
                         </span>
                     }
 
                     {props.data.frontmatter.date &&
                     <span class="date">
-                        <Link to="#">
-                            <time class="entry-date published updated" datetime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
-                        </Link>
+                        <time class="entry-date published updated" datetime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
                     </span> 
                     }
                 </div>
@@ -31,12 +29,12 @@ const Post = ( props ) => {
                 <div class="post__content">
                     
                     <h3 class="post__heading">
-                        <Link to="#">
+                        <Link to={`/blog/${props.data.fields.slug}`}>
                             {props.data.frontmatter.title}
                         </Link>
                     </h3>
                     
-                    <Link to="#">
+                    <Link to={`/blog/${props.data.fields.slug}`}>
                         <p class="excerpt"> {props.data.excerpt} </p>
                     </Link>
                     
@@ -50,7 +48,7 @@ const Post = ( props ) => {
                     {props.data.frontmatter.author &&
                         <span class="user__name">
                             by <span class="author stress">
-                                <a class="url fn n" href="#">{props.data.frontmatter.author}</a>
+                                <a href="#">{props.data.frontmatter.author}</a>
                             </span>
                         </span>
                     }

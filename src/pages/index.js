@@ -28,6 +28,9 @@ const Index = () => {
             }
             excerpt
             id
+            fields {
+              slug
+            }
           }
         }
       }
