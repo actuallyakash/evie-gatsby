@@ -42,11 +42,11 @@ const Index = () => {
     
         {/* <?php if ( have_posts() ) : ?> */}
     
-        <div class="app__inner app">
+        <div className="app__inner app">
     
-          <div class="main-section">
+          <div className="main-section">
     
-            <div class="evie-posts row">
+            <div className="evie-posts row">
 
               {/* looping the posts */}
               {posts.allMarkdownRemark.edges.map( post => (
