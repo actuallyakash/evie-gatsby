@@ -10,6 +10,33 @@ module.exports = {
     tagline: 'A production-ready theme',
     author: 'actuallyakash',
     template: 'Evie',
+    showLogo: true, // true/false to show the logo.png in the static folder
+    menuLinks: [
+      {
+        name:'Home',
+        link:'/'
+      },
+      {
+        name:'About',
+        link:'/about'
+      },
+      { 
+        name: 'Learn Gatsby',
+        link: '/blog/gatsby'
+      },
+      { 
+        name: 'Learn React',
+        link: '/blog/react'
+      },
+      { 
+        name: 'Learn PHP',
+        link: '/blog/php'
+      },
+      { 
+        name: 'Learnn jQuery',
+        link: '/blog/jquery'
+      },
+    ],
   },
   plugins: [
     {
