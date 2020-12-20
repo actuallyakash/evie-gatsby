@@ -19,7 +19,7 @@ export const query = graphql`
 
 const SinglePost = ( props ) => {
     return (
-        <Layout className="single__post">
+        <Layout layoutClass="single__post">
 
             <ContentHeader />
 

@@ -15,8 +15,10 @@ const Footer = () => {
   `)
 
   return (
-    <footer>
-      <h1>&copy; {data.site.siteMetadata.title} &bull; Powered by <Link to="/">{data.site.siteMetadata.template}</Link></h1>
+    <footer className="footer footer--dark center">
+      <span className="footer__textLogo">
+        &copy; {data.site.siteMetadata.title} &bull; Powered by <a href="http://akashgupta.xyz">{data.site.siteMetadata.template}</a>
+      </span>
     </footer>
   )
 }

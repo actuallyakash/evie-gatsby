@@ -38,9 +38,7 @@ const Index = () => {
   `)
 
   return (
-      <Layout class="container" >
-    
-        {/* <?php if ( have_posts() ) : ?> */}
+      <Layout layoutClass="container" >
     
         <div className="app__inner app">
     
@@ -65,9 +63,7 @@ const Index = () => {
               })}
 
               {/* end loop */}
-          
-              
-    
+
             </div>
             
             {/* todo: Pagination */}
@@ -77,7 +73,7 @@ const Index = () => {
 
         {/* else */}
 
-        {/* when no posts - get_template_part( 'template-parts/content', 'none' ); */}
+        {/* when no posts */}
       </Layout>
   )
 }

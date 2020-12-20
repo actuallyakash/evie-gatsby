@@ -30,7 +30,7 @@ const Post = ( props ) => {
                     <span className="date">
                         {/* todo: date & time attributes */}
                         <time className="entry-date published updated" dateTime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
-                    </span> 
+                    </span>
                     }
                 </div>
 
@@ -70,9 +70,6 @@ const Post = ( props ) => {
         </div>
 
     </article>
-
-    
-    // echo ( ( $wp_query->current_post + 1 ) % 3 == 0 ) ? '<div class="clearfix"></div>' : '';
   )
 }
 
