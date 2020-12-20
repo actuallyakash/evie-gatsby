@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -49,9 +49,20 @@ const Index = () => {
             <div className="evie-posts row">
 
               {/* looping the posts */}
-              {posts.allMarkdownRemark.edges.map( post => (
-                <Post id={post.node.id} data={post.node} />
-              ))}
+              {posts.allMarkdownRemark.edges.map( (post, index) => {
+                
+                // Clearfix Fix
+                if( index === 3 ) {
+                  return(
+                    <Fragment>
+                      <div className="clearfix"></div>
+                      <Post key={post.node.id} id={post.node.id} data={post.node} />
+                    </Fragment>
+                  )
+                }
+                
+                return <Post key={post.node.id} id={post.node.id} data={post.node} />
+              })}
 
               {/* end loop */}
           

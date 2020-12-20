@@ -2,15 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Post = ( props ) => {
-    if ( props.data.frontmatter.thumbnail ) {
-        console.log(props.data.frontmatter.thumbnail);
-    }
+
   return (
     <article id={props.id} className="col-md-4"> 
         <div className="evie__post">
 
             {props.data.frontmatter.thumbnail &&
-            <div class="evie__img__container">
+            <div className="evie__img__container">
                 <Link to={`/blog/${props.data.fields.slug}`}>
                     <img src={props.data.frontmatter.thumbnail.publicURL} alt={props.data.frontmatter.thumbnail.name} />
                 </Link>
@@ -49,28 +47,32 @@ const Post = ( props ) => {
                     </Link>
                     
                 </div>
-
+                
+                {props.data.frontmatter.author &&
                 <div className="user__info">
                     <div className="user__img__container">
                         {/* todo: user image */}
                         <img src="https://streetviewhub.com/shots/100x100" alt="" />
                     </div>
 
-                    {props.data.frontmatter.author &&
-                        <span className="user__name">
-                            by <span className="author stress">
-                                {/* todo: user link */}
-                                <a href="#">{props.data.frontmatter.author}</a>
-                            </span>
+                    
+                    <span className="user__name">
+                        by <span className="author stress">
+                            {/* todo: user link */}
+                            <a href="#">{props.data.frontmatter.author}</a>
                         </span>
-                    }
+                    </span>
                 </div>
+                }
 
             </div>
 
         </div>
 
     </article>
+
+    
+    // echo ( ( $wp_query->current_post + 1 ) % 3 == 0 ) ? '<div class="clearfix"></div>' : '';
   )
 }
 
