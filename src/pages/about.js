@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Head from '../components/head'
 import Layout from '../components/layout'
 
 export const query = graphql`
@@ -19,6 +20,9 @@ export const query = graphql`
 const About = () => {
     return (
         <Layout layoutClass="single__page">
+
+            <Head title="About" />
+
             <div className="container center article__header">
                 <h1 className="article__header__title">About Us</h1>
                 

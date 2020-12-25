@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import Head from '../components/head'
 import Layout from '../components/layout'
 import Post from '../components/post'
 
@@ -39,6 +40,8 @@ const Index = () => {
 
   return (
       <Layout layoutClass="container" >
+
+        <Head title="Home" />
     
         <div className="app__inner app">
     

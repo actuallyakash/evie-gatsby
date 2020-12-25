@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
+import Head from '../components/head'
 import Layout from '../components/layout'
 import ContentHeader from '../components/content-header'
 
@@ -27,6 +28,8 @@ export const query = graphql`
 const SinglePost = ( props ) => {
     return (
         <Layout layoutClass="single__post">
+
+            <Head title={props.data.markdownRemark.frontmatter.title} />
 
             <ContentHeader data={props.data.markdownRemark.frontmatter} />
 
