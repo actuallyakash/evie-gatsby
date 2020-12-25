@@ -52,7 +52,7 @@ const Index = () => {
                 // Clearfix Fix
                 if( index === 3 ) {
                   return(
-                    <Fragment>
+                    <Fragment key={index}>
                       <div className="clearfix"></div>
                       <Post key={post.node.id} id={post.node.id} data={post.node} />
                     </Fragment>

@@ -33,7 +33,7 @@ module.exports = {
         link: '/blog/php'
       },
       { 
-        name: 'Learnn jQuery',
+        name: 'Learn jQuery',
         link: '/blog/jquery'
       },
     ],

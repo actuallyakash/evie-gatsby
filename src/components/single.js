@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import ContentHeader from '../components/content-header'
@@ -11,6 +11,13 @@ export const query = graphql`
             frontmatter {
                 title
                 date
+                thumbnail {
+                    id
+                    name
+                    publicURL
+                    relativePath
+                }
+                category
             }
             html
         }
@@ -21,12 +28,7 @@ const SinglePost = ( props ) => {
     return (
         <Layout layoutClass="single__post">
 
-            <ContentHeader />
-
-            <div className="container text-container text-container--center">
-                <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-                <p>{props.data.markdownRemark.frontmatter.date}</p>
-            </div>
+            <ContentHeader data={props.data.markdownRemark.frontmatter} />
 
             <div className="container text-container text-container--center">
 
@@ -44,7 +46,7 @@ const SinglePost = ( props ) => {
 					
 					<span className="about-heading">About Author</span>
 
-					<h4><a href="#" title="Posts by todo: author_name" rel="author"> author name</a> </h4>
+					<h4><Link to="#" title="Posts by todo: author_name" rel="author"> author name</Link> </h4>
                     
                     {/* todo: author_description. */}
 					<p> Lorem ipsum dolor sit amet </p>
@@ -52,45 +54,45 @@ const SinglePost = ( props ) => {
 					{/* Author links */}
 					<div className="author-links">
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-facebook-f" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-youtube" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-spotify" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-github" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-whatsapp" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="#" target="_blank">
+                        <Link to="#" target="_blank">
                             <i className="fab fa-telegram-plane" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
-                        <a href="mailto: #" target="_blank">
+                        <Link to="mailto: #" target="_blank">
                             <i className="far fa-envelope" aria-hidden="true"></i>
-                        </a>
+                        </Link>
 
 					</div>
 				</div>

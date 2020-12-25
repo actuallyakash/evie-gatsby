@@ -59,7 +59,7 @@ const Post = ( props ) => {
                     <span className="user__name">
                         by <span className="author stress">
                             {/* todo: user link */}
-                            <a href="#">{props.data.frontmatter.author}</a>
+                            <Link to="#">{props.data.frontmatter.author}</Link>
                         </span>
                     </span>
                 </div>
