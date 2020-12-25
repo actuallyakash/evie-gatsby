@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
@@ -29,7 +30,16 @@ const SinglePost = ( props ) => {
     return (
         <Layout layoutClass="single__post">
 
-            <Head title={props.data.markdownRemark.frontmatter.title} />
+            {/* Fix for header navbar scroll animation */}
+            {props.data.markdownRemark.frontmatter.thumbnail ?
+                ''
+                :
+                <Helmet>
+                    <script>document.getElementsByTagName('header')[0].classList.add('navbar--extended')</script>
+                </Helmet>
+            }
+
+            <Head isThumbnail={props.data.markdownRemark.frontmatter.thumbnail} title={props.data.markdownRemark.frontmatter.title} />
 
             <ContentHeader data={props.data.markdownRemark.frontmatter} />
 

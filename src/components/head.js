@@ -13,7 +13,7 @@ const Head = ({ title }) => {
                 }
             }
         }
-  `)
+    `)
 
     return(
         <Helmet title={`${title} | ${data.site.siteMetadata.title}`} />
