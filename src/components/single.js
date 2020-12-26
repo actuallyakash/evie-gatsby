@@ -20,6 +20,7 @@ export const query = graphql`
                     relativePath
                 }
                 category
+                author
             }
             html
         }
@@ -59,7 +60,7 @@ const SinglePost = ( props ) => {
 					
 					<span className="about-heading">About Author</span>
 
-					<h4><Link to="#" title="Posts by todo: author_name" rel="author"> author name</Link> </h4>
+					<h4><Link to="#" title="Posts by todo: author_name" rel="author">{props.data.markdownRemark.frontmatter.author}</Link> </h4>
                     
                     {/* todo: author_description. */}
 					<p> Lorem ipsum dolor sit amet </p>
