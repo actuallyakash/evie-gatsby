@@ -53,11 +53,11 @@ const Index = () => {
               {posts.allMarkdownRemark.edges.map( (post, index) => {
                 
                 // Clearfix Fix
-                if( index === 3 ) {
+                if( ( ( index + 1 ) % 3 ) === 0 ) {
                   return(
                     <Fragment key={index}>
-                      <div className="clearfix"></div>
                       <Post key={post.node.id} id={post.node.id} data={post.node} />
+                      <div className="clearfix"></div>
                     </Fragment>
                   )
                 }
