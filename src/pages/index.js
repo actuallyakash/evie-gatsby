@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
@@ -8,11 +8,13 @@ import Post from '../components/post'
 import '../assets/css/bs-grid.css';
 import '../assets/css/style.css';
 
-const Index = () => {
-
-  const posts = useStaticQuery( graphql`
-    query {
-      allMarkdownRemark {
+export const posts = graphql`
+  query($skip: Int!, $limit: Int!) {
+      allMarkdownRemark (
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: $limit
+        skip: $skip
+      ) {
         edges {
           node {
             frontmatter {
@@ -36,7 +38,11 @@ const Index = () => {
         }
       }
     }
-  `)
+  `
+
+const Index = ( props ) => {
+
+  console.log(props)
 
   return (
       <Layout layoutClass="container" >
@@ -50,7 +56,7 @@ const Index = () => {
             <div className="evie-posts row">
 
               {/* looping the posts */}
-              {posts.allMarkdownRemark.edges.map( (post, index) => {
+              {props.data.allMarkdownRemark.edges.map( (post, index) => {
                 
                 // Clearfix Fix
                 if( ( ( index + 1 ) % 3 ) === 0 ) {
