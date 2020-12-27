@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
 import Post from '../components/post'
+import Pagination from '../components/pagination'
 
 import '../assets/css/bs-grid.css';
 import '../assets/css/style.css';
@@ -42,12 +43,6 @@ export const posts = graphql`
 
 const Index = ( props ) => {
 
-  const { currentPage, numPages } = props.pageContext
-  const firstPage = currentPage === 1
-  const lastPage = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
-  const nextPage = (currentPage + 1).toString()
-
   return (
       <Layout layoutClass="container" >
 
@@ -79,18 +74,7 @@ const Index = ( props ) => {
 
             </div>
             
-            {/* todo: Pagination */}
-            <nav className="navigation pagination" role="navigation" aria-label="Posts">
-                <h2 className="screen-reader-text">Posts navigation</h2>
-                <div className="nav-links">
-                  {!firstPage &&
-                    <Link className="next page-numbers" to={`/${prevPage}`} rel="prev">&lt; Prev</Link>
-                  }
-                  {!lastPage &&
-                    <Link className="next page-numbers" to={`/${nextPage}`} rel="next">Next &gt;</Link>
-                  }
-                </div>
-            </nav>
+            <Pagination data={props.pageContext} />
 
           </div>
         </div>
