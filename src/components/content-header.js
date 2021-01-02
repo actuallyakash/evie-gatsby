@@ -9,9 +9,8 @@ const ContentHeader = ( props ) => {
       <div className="container center article__header">
 
         <small className="article__breadcrumbs">
-            {/* todo: breadcrumbs */}
             <small className="article__breadcrumbs">
-              <Link to="#">Home</Link> &gt; <Link to="#">Blog</Link> &gt; Gatsby
+              <Link to="/">Home</Link> &gt; <Link to="/blog">Blog</Link> &gt; {props.data.title}
             </small>
         </small>
 
@@ -46,7 +45,7 @@ const ContentHeader = ( props ) => {
                     <div className="page__header__content__inner" id='navConverter'>
                       <h1 className="page__header__title">{props.data.title}</h1>
                       <p className="page__header__text">
-                        <Link to="#">Home</Link> &gt; <Link to="#">Blog</Link> &gt; Gatsby
+                        <Link to="/">Home</Link> &gt; <Link to="/blog">Blog</Link> &gt; {props.data.title}
                       </p>
                     </div>
                 </div>
