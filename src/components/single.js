@@ -20,6 +20,7 @@ export const query = graphql`
                     relativePath
                 }
                 category
+                tags
                 author
             }
             html
@@ -28,6 +29,7 @@ export const query = graphql`
 `
 
 const SinglePost = ( props ) => {
+    
     return (
         <Layout layoutClass="single__post">
 
@@ -51,8 +53,14 @@ const SinglePost = ( props ) => {
                     <div className="app__main" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
 				</div>
 
-				{/* todo: Tags */}
-				{/* evie_get_tags(); */}
+                {props.data.markdownRemark.frontmatter.tags &&
+				<div className="evie__tags">
+                    {props.data.markdownRemark.frontmatter.tags.split(',').map( (tag, index) => (
+                        <span id={index} className="evie__tag">
+                            <a href={`/search?s=${tag.trim()}`} title={`Tag: ${tag.trim()}`}>{tag.trim().charAt(0).toUpperCase() + tag.trim().slice(1)}</a>
+                        </span>
+                    ))}
+                </div>}
 
 				{/* Author Card */}
 				<div className="author__card">

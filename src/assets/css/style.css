@@ -1253,10 +1253,11 @@ select::-ms-expand {
 }
 
 .evie__tags span:not(:first-child) {
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
-.evie__category {
+.evie__category,
+.evie__tag {
   background-color: #6c63ff;
   padding: 2px 12px;
   color: #fff;
