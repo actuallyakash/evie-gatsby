@@ -1610,6 +1610,7 @@ aside.comment-box-wrap form {
   width: 15px;
   margin-left: 16pt;
   margin-top: 3px;
+  cursor: pointer;
 }
 
 .navbar-container .search-btn {

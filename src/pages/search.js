@@ -44,7 +44,7 @@ const Search = ( props ) => {
   const { search } = window.location
   const query = new URLSearchParams(search).get('s')
 
-  const reconcileObject = ( results ) => {
+  const formatObject = ( results ) => {
     return results.map(post => {
       const { id, title, excerpt, date, slug, category, author, thumbnail } = post;
       return { node: { id, excerpt, fields: { slug }, frontmatter: { title, date, category, author, thumbnail } } };
@@ -52,7 +52,7 @@ const Search = ( props ) => {
   }
   
   const results = useFlexSearch( query, props.data.localSearchPosts.index, props.data.localSearchPosts.store )
-  const posts = reconcileObject( results )
+  const posts = query ? formatObject( results ) : props.data.allMarkdownRemark.edges
 
   return (
     <Layout layoutClass="container">
