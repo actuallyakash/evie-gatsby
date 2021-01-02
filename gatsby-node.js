@@ -15,8 +15,16 @@ module.exports.onCreateNode = ({ node, actions }) => {
 }
 
 module.exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
     const singlePostTemplate = path.resolve('./src/components/single.js')
+
+    // Fixing /blog redirect
+    createRedirect({
+        fromPath: `/blog`,
+        toPath: `/`,
+        redirectInBrowser: true,
+        isPermanent: true,
+    })
     
     const res = await graphql(`
         query {
