@@ -940,17 +940,19 @@ select::-ms-expand {
   border-bottom: none;
 }
 
-.js .nav__mobile {
+.nav__mobile {
   clip: rect(0 0 0 0);
   max-height: 0;
   position: absolute;
   display: block;
   overflow: hidden;
   zoom: 1;
+  transition: max-height 284ms ease 0s;
 }
 
 .nav__mobile.opened {
-  max-height: 9999px;
+  max-height: 333px;
+  position: relative;
 }
 
 .nav-toggle {
@@ -964,11 +966,17 @@ select::-ms-expand {
 }
 
 @media (min-width: 992px) {
-  .js .nav__mobile {
+  .nav__mobile {
     position: relative;
   }
 
-  .js .nav__mobile.closed {
+  .nav__mobile.opened {
+    position: absolute;
+    max-height: 333px !important;
+  }
+
+  .nav__mobile.closed {
+    display: none;
     max-height: none;
   }
 
@@ -981,6 +989,7 @@ select::-ms-expand {
   height: 1.2em;
   width: 1.2em;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .hero__overlay {
