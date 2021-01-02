@@ -1,9 +1,9 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
-import Post from '../components/post'
+import Archive from '../components/archive'
 import Pagination from '../components/pagination'
 
 import '../assets/css/bs-grid.css';
@@ -51,35 +51,16 @@ const Index = ( props ) => {
         <div className="app__inner app">
     
           <div className="main-section">
-    
-            <div className="evie-posts row">
 
-              {/* looping the posts */}
-              {props.data.allMarkdownRemark.edges.map( (post, index) => {
-                
-                // Clearfix Fix
-                if( ( ( index + 1 ) % 3 ) === 0 ) {
-                  return(
-                    <Fragment key={index}>
-                      <Post key={post.node.id} id={post.node.id} data={post.node} />
-                      <div className="clearfix"></div>
-                    </Fragment>
-                  )
-                }
-                
-                return <Post key={post.node.id} id={post.node.id} data={post.node} />
-              })}
-
-              {/* end loop */}
-
-            </div>
+            <Archive data={props.data.allMarkdownRemark.edges} />
             
             <Pagination data={props.pageContext} />
 
           </div>
+
         </div>
 
-        {/* else */}
+        {/* //TODO: else */}
 
         {/* when no posts */}
       </Layout>

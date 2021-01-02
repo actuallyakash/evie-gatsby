@@ -61,6 +61,54 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'posts',
+        engine: 'flexsearch',
+        query: `
+          query {
+            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+              edges {
+                node {
+                  id
+                  excerpt
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    date
+                    category
+                    author
+                    thumbnail {
+                      id
+                      name
+                      publicURL
+                      relativePath
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `,
+        ref: 'slug',
+        index: [ 'title', 'excerpt', 'category', 'author' ],
+        store: ['id', 'title', 'excerpt', 'date', 'slug', 'category', 'author', 'thumbnail'],
+        normalizer: ({ data }) =>
+        data.allMarkdownRemark.edges.map(post => ({
+          id: post.node.id,
+          title: post.node.frontmatter.title,
+          category: post.node.frontmatter.category,
+          author: post.node.frontmatter.author,
+          date: post.node.frontmatter.date,
+          thumbnail: post.node.frontmatter.thumbnail,
+          excerpt: post.node.excerpt,
+          slug: post.node.fields.slug,
+        }))
+      }
     }
   ],
 }

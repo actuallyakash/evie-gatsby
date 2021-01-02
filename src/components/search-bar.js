@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SearchBar = ({ showSearch, setVisibility, searchQuery, setSearchQuery }) => {
 
   return (
     <div id="searchModal" className={`modal ${showSearch ? "modal-active" : ""}`}>
         <div className="modal-content">
-            <form role="search" method="get" className="search-form" action="/" autoComplete="off">
+            <form role="search" method="get" className="search-form" action="/search" autoComplete="off">
             <span className="screen-reader-text">Search for:</span>
             
             <input
-                className="search-input"
-                onChange={ (e) => console.log(e) }
-                value={searchQuery}
-                onInput={ (e) => setSearchQuery( e.target.value ) }
-                type="text"
-                id="header-search"
-                placeholder="Search..."
-                name="s"
+              className="search-input"
+              onInput={ (e) => setSearchQuery( e.target.value ), console.log('yesah') }
+              type="text"
+              id="header-search"
+              placeholder="Search..."
+              name="s"
             />
             {/* <button type="submit">Search</button> */}
             </form>

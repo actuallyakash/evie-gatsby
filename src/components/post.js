@@ -68,7 +68,6 @@ const Post = ( props ) => {
             </div>
 
         </div>
-
     </article>
   )
 }
