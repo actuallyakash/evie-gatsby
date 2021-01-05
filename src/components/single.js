@@ -63,12 +63,16 @@ const SinglePost = ( props ) => {
                 </div>}
 
 				{/* Author Card */}
+                {props.data.markdownRemark.frontmatter.author &&
 				<div className="author__card">
+                    {/* todo: author */}
                     <img src="https://streetviewhub.com/shots/100x100" alt="" height="110" width="110" />
 					
 					<span className="about-heading">About Author</span>
 
-					<h4><Link to="#" title="Posts by todo: author_name" rel="author">{props.data.markdownRemark.frontmatter.author}</Link> </h4>
+					<h4>
+                        <Link to={`/search?s=${props.data.markdownRemark.frontmatter.author}`} title={`Posts by ${props.data.markdownRemark.frontmatter.author}`} rel="author">{props.data.markdownRemark.frontmatter.author}</Link>
+                    </h4>
                     
                     {/* todo: author_description. */}
 					<p> Lorem ipsum dolor sit amet </p>
@@ -118,6 +122,7 @@ const SinglePost = ( props ) => {
 
 					</div>
 				</div>
+                }
 
 			</div>
         </Layout>

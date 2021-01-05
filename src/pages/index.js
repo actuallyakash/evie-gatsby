@@ -59,10 +59,7 @@ const Index = ( props ) => {
           </div>
 
         </div>
-
-        {/* //TODO: else */}
-
-        {/* when no posts */}
+        
       </Layout>
   )
 }

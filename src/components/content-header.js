@@ -17,14 +17,15 @@ const ContentHeader = ( props ) => {
         <h1 className="article__header__title">{props.data.title}</h1>
 
         {/* todo: author */}
+        {props.data.author &&
         <div className="user__info">
             <div className="user__img__container">
               <img src="https://streetviewhub.com/shots/100x100" alt="" />
             </div>
             <span className="user__name">
-              by <span className="author stress"><Link to="#">Ladiz Washroom</Link></span>
+              by <span className="author stress"><Link to={`/search?s=${props.data.author}`}>{props.data.author}</Link></span>
             </span>
-        </div>
+        </div>}
         
         <div className="page__header__image">
           <div className="post-thumbnail">

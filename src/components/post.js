@@ -21,8 +21,7 @@ const Post = ( props ) => {
                     
                     {props.data.frontmatter.category &&
                         <span className="evie__category">
-                            {/* todo: category link */}
-                            <Link to="" className="category-link">{props.data.frontmatter.category}</Link>
+                            <Link to={`/search?s=${props.data.frontmatter.category}`} className="category-link">{props.data.frontmatter.category}</Link>
                         </span>
                     }
 
@@ -58,8 +57,7 @@ const Post = ( props ) => {
                     
                     <span className="user__name">
                         by <span className="author stress">
-                            {/* todo: user link */}
-                            <Link to="#">{props.data.frontmatter.author}</Link>
+                            <Link to={`/search?s=${props.data.frontmatter.author}`}>{props.data.frontmatter.author}</Link>
                         </span>
                     </span>
                 </div>
