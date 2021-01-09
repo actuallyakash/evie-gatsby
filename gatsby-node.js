@@ -58,15 +58,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
     // Paginating the posts
     const postsPerPage = 6
     const numPages = Math.ceil( posts.length / postsPerPage )
-    const blogTemplate = path.resolve('./src/pages/index.js')
+    const blogTemplate = path.resolve('./src/templates/index.js')
     
     Array.from({ length: numPages }).forEach(( _, i ) => {
         createPage({
             path: i == 0 ? `/` : `/${i + 1}`,
             component: blogTemplate,
             context: {
-                limit: postsPerPage,
                 skip: i * postsPerPage,
+                limit: postsPerPage,
                 numPages,
                 currentPage: i + 1,
             }

@@ -1,21 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
-
-export const query = graphql`
-    query( $slug: String! ) {
-        markdownRemark ( fields: { slug: { eq: $slug } } )
-        {
-            frontmatter {
-                title
-                date
-            }
-            html
-        }
-    }  
-`
 
 const About = () => {
     return (

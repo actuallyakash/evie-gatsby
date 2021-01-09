@@ -10,11 +10,11 @@ import '../assets/css/bs-grid.css';
 import '../assets/css/style.css';
 
 export const posts = graphql`
-  query( $skip: Int!, $limit: Int! ) {
+  query ($skip: Int!, $limit: Int!) {
       allMarkdownRemark (
         sort: { fields: [frontmatter___date], order: ASC }
-        limit: $limit
         skip: $skip
+        limit: $limit
       ) {
         edges {
           node {
