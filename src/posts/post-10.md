@@ -1,9 +1,12 @@
 ---
 title: 'The white-hot beauty of Iceland in stunning photos'
 date: 17-01-15
-author: Hugh Janus
 thumbnail: ../assets/images/10.jpg
 category: Travel
+
+author: Hugh Janus
+authorPic: 'https://streetviewhub.com/shots/100x100'
+authorBio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sunt sapiente doloribus minus veritatis.'
 
 ---
 

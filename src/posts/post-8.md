@@ -1,9 +1,12 @@
 ---
 title: 'Post with YouTube Video'
 date: "03-12-2020"
-author: Hugh Janus
 thumbnail: ../assets/images/8.jpg
 category: World
+
+author: Hugh Janus
+authorPic: 'https://streetviewhub.com/shots/100x100'
+authorBio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sunt sapiente doloribus minus veritatis.'
 
 ---
 This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.

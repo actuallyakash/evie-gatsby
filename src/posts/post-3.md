@@ -1,9 +1,12 @@
 ---
 title: 'A post showing how headings looks like'
 date: "03-12-2020"
-author: Ladiz Washroom
 thumbnail: ../assets/images/3.jpg
 category: Travel
+
+author: Ladiz Washroom
+authorPic: 'https://streetviewhub.com/shots/100x100'
+authorBio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sunt sapiente doloribus minus veritatis labore delectus reprehenderit deserunt aliquam provident possimus rerum in ea unde quisquam quis tempora, iure eligendi.'
 
 ---
 Heading 1

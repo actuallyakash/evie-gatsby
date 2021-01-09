@@ -1,9 +1,12 @@
 ---
 title: 'Nulla vitae elit libero, a pharetra augue'
 date: "03-12-2020"
-author: Ladiz Washroom
 thumbnail: ../assets/images/13.jpg
 category: Interior
+
+author: Ladiz Washroom
+authorPic: 'https://streetviewhub.com/shots/100x100'
+authorBio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sunt sapiente doloribus minus veritatis labore delectus reprehenderit deserunt aliquam provident possimus rerum in ea unde quisquam quis tempora, iure eligendi.'
 
 ---
 This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.
