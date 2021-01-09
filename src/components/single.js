@@ -22,10 +22,12 @@ export const query = graphql`
                 category
                 tags
                 author
+                authorPic
+                authorBio
             }
             html
         }
-    }  
+    }
 `
 
 const SinglePost = ( props ) => {
@@ -65,8 +67,9 @@ const SinglePost = ( props ) => {
 				{/* Author Card */}
                 {props.data.markdownRemark.frontmatter.author &&
 				<div className="author__card">
-                    {/* todo: author */}
-                    <img src="https://streetviewhub.com/shots/100x100" alt="" height="110" width="110" />
+                    {props.data.markdownRemark.frontmatter.authorPic &&
+                    <img src={props.data.markdownRemark.frontmatter.authorPic} alt={props.data.markdownRemark.frontmatter.author} height="110" width="110" />
+                    }
 					
 					<span className="about-heading">About Author</span>
 
@@ -74,8 +77,9 @@ const SinglePost = ( props ) => {
                         <Link to={`/search?s=${props.data.markdownRemark.frontmatter.author}`} title={`Posts by ${props.data.markdownRemark.frontmatter.author}`} rel="author">{props.data.markdownRemark.frontmatter.author}</Link>
                     </h4>
                     
-                    {/* todo: author_description. */}
-					<p> Lorem ipsum dolor sit amet </p>
+                    {props.data.markdownRemark.frontmatter.authorBio &&
+					<p>{props.data.markdownRemark.frontmatter.authorBio}</p>
+                    }
 					
 					{/* Author links */}
 					<div className="author-links">

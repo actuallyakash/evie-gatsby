@@ -27,8 +27,7 @@ const Post = ( props ) => {
 
                     {props.data.frontmatter.date &&
                     <span className="date">
-                        {/* todo: date & time attributes */}
-                        <time className="entry-date published updated" dateTime="2015-05-25T12:52:33+00:00">{props.data.frontmatter.date}</time>
+                        <time dateTime={props.data.frontmatter.date}>{props.data.frontmatter.date}</time>
                     </span>
                     }
                 </div>
@@ -49,11 +48,10 @@ const Post = ( props ) => {
                 
                 {props.data.frontmatter.author &&
                 <div className="user__info">
+                    {props.data.frontmatter.authorPic &&
                     <div className="user__img__container">
-                        {/* todo: user image */}
-                        <img src="https://streetviewhub.com/shots/100x100" alt="" />
-                    </div>
-
+                        <img src={props.data.frontmatter.authorPic} alt={props.data.frontmatter.author} />
+                    </div>}
                     
                     <span className="user__name">
                         by <span className="author stress">
@@ -62,9 +60,7 @@ const Post = ( props ) => {
                     </span>
                 </div>
                 }
-
             </div>
-
         </div>
     </article>
   )

@@ -25,16 +25,12 @@ module.exports = {
         link: '/blog/gatsby'
       },
       { 
-        name: 'Learn React',
-        link: '/blog/react'
+        name: 'Post with Images',
+        link: '/blog/post-12'
       },
       { 
-        name: 'Learn PHP',
-        link: '/blog/php'
-      },
-      { 
-        name: 'Learn jQuery',
-        link: '/blog/jquery'
+        name: 'Post with Video',
+        link: '/blog/post-1'
       },
     ],
   },

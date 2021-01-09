@@ -23,6 +23,7 @@ export const posts = graphql`
               date
               category
               author
+              authorPic
               thumbnail {
                 id
                 name
