@@ -40,9 +40,8 @@ export const postQuery = graphql`
   `
 
 const Search = ( props ) => {
-
-  const { search } = window.location
-  const query = new URLSearchParams(search).get('s')
+  
+  const query = new URLSearchParams(props.location.search).get('s')
 
   const formatObject = ( results ) => {
     return results.map(post => {

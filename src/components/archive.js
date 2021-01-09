@@ -15,7 +15,7 @@ const Archive = ( props ) => {
           return(
             <Fragment key={index}>
               <Post key={post.node.id} id={post.node.id} data={post.node} />
-              <div className="clearfix"></div>
+              <div key={index} className="clearfix"></div>
             </Fragment>
           )
         }
