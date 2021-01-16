@@ -1,8 +1,8 @@
 {
   "name": "evie-gatsby",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "A production-ready and minimal theme for your projects and websites. It is extremely lightweight, customizable and works perfectly on modern browsers.",
+  "version": "1.0.0",
+  "author": "actuallyakash <akash_gupta@hotmail.com> (http://akashgupta.xyz)",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -31,11 +31,17 @@
   "devDependencies": {
     "prettier": "2.1.2"
   },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/actuallyakash/evie-gatsby"
+    "url": "git+https://github.com/actuallyakash/evie-gatsby.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "url": "https://github.com/actuallyakash/evie-gatsby/issues"
+  },
+  "homepage": "https://github.com/actuallyakash/evie-gatsby#readme"
 }
