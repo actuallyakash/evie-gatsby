@@ -85,7 +85,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 🖼 Demo & Packages
 
 - On [Netlify](https://confident-yalow-b5bc0d.netlify.app/)
-- On [Gatsby](https://eviegatsby.gtsb.io/)
+- On [Gatsby Cloud](https://eviegatsby.gtsb.io/)
 - [NPM package on npmjs.com](https://www.npmjs.com/package/evie-gatsby)
 
 ## 💫 Deploy
