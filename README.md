@@ -35,6 +35,13 @@ A production-ready and minimal theme for your projects and websites. It is extem
 
     Open the `my-evie-gatsby-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
+## 🖼 Demo & Packages
+
+- Demo on [Netlify](https://confident-yalow-b5bc0d.netlify.app/)
+- Demo on [Gatsby Cloud](https://eviegatsby.gtsb.io/)
+- [NPM package on npmjs.com](https://www.npmjs.com/package/evie-gatsby)
+- [Official Plugin at Gatsby](https://www.gatsbyjs.com/plugins/evie-gatsby)
+
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
@@ -81,12 +88,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 🖼 Demo & Packages
-
-- On [Netlify](https://confident-yalow-b5bc0d.netlify.app/)
-- On [Gatsby Cloud](https://eviegatsby.gtsb.io/)
-- [NPM package on npmjs.com](https://www.npmjs.com/package/evie-gatsby)
 
 ## 💫 Deploy
 
