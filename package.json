@@ -1,7 +1,7 @@
 {
   "name": "evie-gatsby",
   "description": "A production-ready and minimal theme for your projects and websites. It is extremely lightweight, customizable and works perfectly on modern browsers.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "actuallyakash <akash_gupta@hotmail.com> (http://akashgupta.xyz)",
   "license": "0BSD",
   "scripts": {
