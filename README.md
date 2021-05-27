@@ -1,9 +1,14 @@
-
 <h1 align="center">
   Evie - Gatsby
 </h1>
 
 A production-ready and minimal theme for your projects and websites. It is extemely lightweight, customizable and works perfectly on modern browsers.
+
+
+<blockquote>
+	<h4>Check out <a target="_blank" href="https://github.com/actuallyakash/evie-wp/">EvieWP</a>, if you're looking for a WordPress Theme.</h4>
+</blockquote>
+
 
 ## 🚀 Quick start
 
