@@ -4,11 +4,11 @@
 
 A production-ready and minimal theme for your projects and websites. It is extemely lightweight, customizable and works perfectly on modern browsers.
 
+<br>
 
-<blockquote>
-	<h4>Check out <a target="_blank" href="https://github.com/actuallyakash/evie-wp/">EvieWP</a>, if you're looking for a WordPress Theme.</h4>
-</blockquote>
+> ### Check out [Evie - Gatsby](https://github.com/actuallyakash/evie-gatsby), if you're looking for a **React based Gatsby Theme**.
 
+<br>
 
 ## 🚀 Quick start
 

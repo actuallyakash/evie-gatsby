@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className="footer footer--dark center">
       <span className="footer__textLogo">
-        &copy; {data.site.siteMetadata.title} &bull; Powered by <a href="http://akashgupta.xyz">{data.site.siteMetadata.template}</a>
+        &copy; {data.site.siteMetadata.title} &bull; Powered by <a href="http://actuallyakash.github.io/">{data.site.siteMetadata.template}</a>
       </span>
     </footer>
   )
